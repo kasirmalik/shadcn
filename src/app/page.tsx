@@ -1,7 +1,9 @@
-
-
+import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
-   <h1></h1>
+   <div>
+      <Button variant={"outline"}>Cliick me</Button>
+   </div>
+   
   );
 }
