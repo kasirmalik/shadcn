@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import {User} from "lucide-react"
+import {Bell, icons, User} from "lucide-react"
 import {
   Command as CommandComponent,
 
@@ -33,6 +33,8 @@ export default function Sidebar() {
                 },
                 {
                     link:'/',
+                    icons:<Bell />,
+
                     text:"Notfications"
                 },
                
@@ -72,7 +74,7 @@ export default function Sidebar() {
              <CommandGroup key={key} heading={menu.group}>
                 {menu.items.map((option: any,optionKey:number)=> 
                   <CommandItem key={optionKey}>
-                      {option.icon}
+                     {option.icon}
                      {option.text}
                      </CommandItem>
                     
