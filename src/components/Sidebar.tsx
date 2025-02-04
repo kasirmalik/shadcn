@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
-import {Bell, icons, User} from "lucide-react"
+import { BellDot, BookLock, CreditCard, icons, Logs, Settings, User} from "lucide-react"
 import {
   Command as CommandComponent,
 
@@ -29,12 +29,12 @@ export default function Sidebar() {
                 },
                 {
                     link:'/',
-                    text:"Billing"
+                    text:"Billing",
+                    icon: <CreditCard/>
                 },
                 {
                     link:'/',
-                    icons:<Bell />,
-
+                    icons:<BellDot/>,
                     text:"Notfications"
                 },
                
@@ -46,14 +46,17 @@ export default function Sidebar() {
             items:[
                 {
                     link:'/',
+                    icon:<Settings/>,
                     text:"Genrel Settings"
                 },
                 {
                     link:'/',
+                    icon:<BookLock/>,
                     text:"Privacy"
                 },
                 {
                     link:'/',
+                    icon:<Logs/>, 
                     text:"Logs"
                 },
                 
@@ -63,17 +66,17 @@ export default function Sidebar() {
     ]
   return (
     <>
-      <div className="w-[300px] flex flex-col gap-2 min-w-[300px] border-r min-h-screen p-4">
+      <div className="w-[300px] fixed flex flex-col gap-2 min-w-[300px] border-r min-h-screen p-4">
         <div>
           <UserItem />
         </div>
         <div className="grow">
-          <CommandComponent>
-            <CommandList>
+          <CommandComponent style={{overflow:"hidden"}}>
+            <CommandList style={{overflow:"visible"}}>
              { menuList.map((menu:any,key:number)=> (
              <CommandGroup key={key} heading={menu.group}>
                 {menu.items.map((option: any,optionKey:number)=> 
-                  <CommandItem key={optionKey}>
+                  <CommandItem key={optionKey} className="flex gap-2 cursor-pointer">
                      {option.icon}
                      {option.text}
                      </CommandItem>

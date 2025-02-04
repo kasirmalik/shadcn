@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header"; 
 
 
 
@@ -21,7 +22,8 @@ export default function RootLayout({
         className={`flex items-start justify-between`}
       >
         <Sidebar/>
-        <main className="w-full h-full">
+        <main className="grid w-full h-full pl-[300px]">
+          <Header/>
          {children}
         </main>
         
