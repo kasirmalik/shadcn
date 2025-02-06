@@ -4,8 +4,8 @@ import { BellDot, BookLock, CreditCard, icons, Logs, Settings, User} from "lucid
 import {
   Command as CommandComponent,
 
-  CommandDialog,
-  CommandEmpty,
+
+  
   CommandGroup,
   CommandInput,
   CommandItem,
@@ -34,7 +34,7 @@ export default function Sidebar() {
                 },
                 {
                     link:'/',
-                    icons:<BellDot/>,
+                    icons:<CreditCard/>,
                     text:"Notfications"
                 },
                
@@ -70,13 +70,13 @@ export default function Sidebar() {
         <div>
           <UserItem />
         </div>
-        <div className="grow">
+        <div className="grow ">
           <CommandComponent style={{overflow:"hidden"}}>
             <CommandList style={{overflow:"visible"}}>
              { menuList.map((menu:any,key:number)=> (
              <CommandGroup key={key} heading={menu.group}>
                 {menu.items.map((option: any,optionKey:number)=> 
-                  <CommandItem key={optionKey} className="flex gap-2 cursor-pointer">
+                  <CommandItem key={optionKey} className="flex gap-2 cursor-pointer text-xl hover:shadow ">
                      {option.icon}
                      {option.text}
                      </CommandItem>
