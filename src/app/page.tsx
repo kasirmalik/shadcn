@@ -1,4 +1,7 @@
+'use client'
+import Calender from "@/components/Cards/Calender";
 import Generel from "@/components/Cards/Generel";
+import Lines from "@/components/Cards/Lines";
 import { Card } from "@/components/ui/card";
 
 export default function Home() {
@@ -7,12 +10,12 @@ export default function Home() {
       <div className="grid grid-cols-2 gap-[32px]">
         <Generel />
         <div className="grid gap-[32px]">
-          <Card />
-          <Card />
+          <Calender />
+          <Calender />
         </div>
       </div>
       <div className="grid grid-cols-3 gap-[32px]">
-         <Card className="h-[300px]"/>
+         <Lines/>
          <Card className="h-[300px]"/>
          <Card className="h-[300px]"/>
       </div>
