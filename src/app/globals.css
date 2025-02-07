@@ -8,3 +8,8 @@ body {
 
 
 
+@layer base {
+  .bg-card{
+    overflow: hidden!important;
+  }
+}

@@ -1,5 +1,6 @@
 'use client'
 import Calender from "@/components/Cards/Calender";
+import { DataTableDemo } from "@/components/Cards/DataTable";
 import Generel from "@/components/Cards/Generel";
 import Lines from "@/components/Cards/Lines";
 import { TableDemo } from "@/components/Cards/Table";
@@ -15,12 +16,15 @@ export default function Home() {
           <Calender />
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-[32px] h-[300px] overflow-hidden">
+      <div className="grid lg:grid-cols-3 gap-[32px] lg:h-[300px] overflow-hidden">
          <Lines/>
          <Card className="p-[32px] overflow-y-scroll">
           <TableDemo/>
          </Card>
-         <Card/>
+         <Card className="p-[32px] overflow-y-scroll">
+          <DataTableDemo/>
+         </Card>
+         
       </div>
     </div>
   );

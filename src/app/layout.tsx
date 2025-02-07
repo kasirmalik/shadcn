@@ -19,10 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex items-start justify-between`}
-      >
-        <Sidebar/>
-        <main className="grid w-full h-full pl-[300px]">
+        className={`flex items-start justify-between`}>
+          <div className="hidden lg:flex min-w-[300px]  border-r min-h-screen ">
+           <Sidebar/>   
+          </div>
+        <main className="grid w-full h-full ">
           <Header/>
          <div className="p-4">
           {children}
