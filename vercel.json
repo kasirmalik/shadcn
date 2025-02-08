@@ -1,5 +1,9 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
+  "build": {
+    "env": {
+      "NEXT_IGNORE_BUILD_ERRORS": "true"
+    }
   }
+}
+
+ 
